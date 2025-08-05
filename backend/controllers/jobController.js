@@ -3,7 +3,16 @@ import { Job } from "../models/jobSchema.js";
 import ErrorHandler from "../middlewares/error.js";
 
 export const getAllJobs = catchAsyncErrors(async (req, res, next) => {
-  const jobs = await Job.find({ expired: false });
+  const { category } = req.query; // ✅ get ?category= from URL
+  const filter = { expired: false };
+
+  if (category) {
+    //filter.category = category; // ✅ add category filter if present
+    filter.category = { $regex: category, $options: "i" };
+  }
+
+  const jobs = await Job.find(filter);
+
   res.status(200).json({
     success: true,
     jobs,

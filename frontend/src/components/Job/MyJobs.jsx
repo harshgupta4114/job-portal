@@ -195,7 +195,7 @@ const MyJobs = () => {
                           </select>
                         </div>
                         <div>
-                          <span>
+                          <div>
                             Salary:{" "}
                             {element.fixedSalary ? (
                               <input
@@ -244,7 +244,7 @@ const MyJobs = () => {
                                 />
                               </div>
                             )}
-                          </span>
+                          </div>
                         </div>
                         <div>
                           {" "}

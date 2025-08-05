@@ -1,12 +1,13 @@
 import React, { createContext, useState } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
+import  {ThemeProvider} from "./ThemeContext";
 
 export const Context = createContext({
   isAuthorized: false,
 });
 
-const AppWrapper = () => {
+export const AppWrapper = () => {
   const [isAuthorized, setIsAuthorized] = useState(false);
   const [user, setUser] = useState({});
 
@@ -23,6 +24,7 @@ const AppWrapper = () => {
     </Context.Provider>
   );
 };
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

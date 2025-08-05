@@ -71,22 +71,6 @@ p {
     font-size: 1.15rem;
   }
 }
-body.light {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-body.dark {
-  background-color: #1a1a1a;
-  color: #f5f5f5;
-}
-
-/* Optional: dark mode cards/buttons */
-.card {
-  background-color: inherit;
-  color: inherit;
-  border: 1px solid gray;
-}
 
 .authPage {
   display: flex;
@@ -1367,13 +1351,4 @@ nav .hamburger {
   .resume-modal {
     z-index: 11;
   }
-}
-.theme-toggle {
-  background: none;
-  border: 1px solid currentColor;
-  padding: 6px 12px;
-  border-radius: 6px;
-  color: inherit;
-  cursor: pointer;
-  margin-left: 1rem;
 }
